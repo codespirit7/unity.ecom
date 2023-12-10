@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = 5000 || process.env.PORT;
+const PORT = 5500 || process.env.PORT;
 
 app.use("/api/auth", authRoute);
 app.use("/api/seller", sellerRoute);

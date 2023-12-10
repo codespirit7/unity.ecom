@@ -1,8 +1,13 @@
+const Catalog = require('../model/Catalog');
+const Product = require('../model/Product');
+
+
 const createCatalog = async (req, res) => {
   try {
-    const u1 = req.user;
-    res.send(u1);
-  } catch (error) {}
+    
+  } catch (error) {
+    
+  }
 };
 
 module.exports = { createCatalog };

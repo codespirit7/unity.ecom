@@ -11,7 +11,7 @@ const CatalogSchema = new mongoose.Schema({
   },
   products: [
     {
-      tpye: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: Product,
     },
   ],
