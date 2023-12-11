@@ -29,9 +29,9 @@
      
      set Environment variables.
 
-     `MONGO_URL = "mongodb+srv://<username>:<password>@cluster0.wvcngti.mongodb.net/?retryWrites=true&w=majority"`
+     MONGO_URL = "mongodb+srv://<username>:<password>@cluster0.wvcngti.mongodb.net/?retryWrites=true&w=majority"
       
-      `JWT_SECRET = <your_secret_key>`
+      JWT_SECRET = <your_secret_key>
      
 
 **5. Start the server:**
@@ -66,13 +66,6 @@
   "password": "test",
   "userType": "buyer"
 }
-
-  {
-  "username": "test1",
-  "email": "test1@gmail.com",
-  "password": "test1",
-  "userType": "seller"
-}
   
 </pre>
 
@@ -101,6 +94,79 @@
   }
   
 </pre>
+
+## API for Buyers
+
+**URL:** http://localhost:5000/api/buyer/list-of-sellers
+
+**Method:** GET
+
+**Authorization:** Bearer "<Your Token>"
+
+**Content Type:** application/json
+
+
+**URL:** http://localhost:5000/api//api/buyer/seller-catalog/:seller_id
+
+**Method:** GET
+
+**Authorization:** Bearer "<Your Token>"
+
+**Content Type:** application/json
+
+
+**URL:** http://localhost:5000/api/buyer/create-order/:seller_id
+
+**Method:** POST
+
+**Authorization:** Bearer "<Your Token>"
+
+**Content Type:** application/json
+
+**Request Body**
+<pre>
+  {
+  "items": [{
+    "product_id": "product_id",
+    "quantity": 2
+  }]
+}
+  
+</pre>
+
+
+## API for Sellers.
+
+**URL:** http://localhost:5000 /api/seller/create-catalog
+
+**Method:** POST
+
+**Authorization:** Bearer "<Your Token>"
+
+**Content Type:** application/json
+
+**Request Body**
+<pre>
+ {
+  "items": [
+    {"name": "Zubaida Product 9", "price": "19.99"}
+  ]
+}
+  
+</pre>
+
+
+**URL:** http://localhost:5000/api/seller/orders
+
+**Method:** GET
+
+**Authorization:** Bearer "<Your Token>"
+
+**Content Type:** application/json
+
+
+
+
   
 The response will return a token that can be used to authenticate both the seller and buyer for multiple API requests.
 
