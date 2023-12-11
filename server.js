@@ -4,6 +4,7 @@ const app = express();
 
 const authRoute = require("./routers/authRoute");
 const sellerRoute = require("./routers/sellerRoute");
+const buyerRoute = require("./routers/buyerRoute");
 
 require("dotenv").config();
 
@@ -15,6 +16,7 @@ const PORT = 5500 || process.env.PORT;
 
 app.use("/api/auth", authRoute);
 app.use("/api/seller", sellerRoute);
+app.use("/api/buyer", buyerRoute);
 
 app.use("/hello", (req, res) => {
   res.send("hello");
