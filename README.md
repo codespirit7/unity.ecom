@@ -25,9 +25,8 @@
 
 `npm install`
 
-**4. Setting up environment files**
+**4. Setting up environment files in .env file**
      
-     set Environment variables.
 
      MONGO_URL = "mongodb+srv://<username>:<password>@cluster0.wvcngti.mongodb.net/?retryWrites=true&w=majority"
       
@@ -50,6 +49,8 @@
 
 **API Endpoint**
 
+
+
 **URL:** http://localhost:5000/api/auth/register
 
 **Method:** POST
@@ -68,6 +69,8 @@
 }
   
 </pre>
+
+
 
 
 **URL:** http://localhost:5000/api/auth/login
@@ -90,27 +93,33 @@
   **Response Body**
   <pre>
   {
-  "Token": "<your jwt token>"
+  "Token": "your jwt token"
   }
   
 </pre>
 
+
+
 ## API for Buyers
+
+
 
 **URL:** http://localhost:5000/api/buyer/list-of-sellers
 
 **Method:** GET
 
-**Authorization:** Bearer "<Your Token>"
+**Authorization:** Bearer token
 
 **Content Type:** application/json
 
 
-**URL:** http://localhost:5000/api//api/buyer/seller-catalog/:seller_id
+
+
+**URL:** http://localhost:5000/api/buyer/seller-catalog/:seller_id
 
 **Method:** GET
 
-**Authorization:** Bearer "<Your Token>"
+**Authorization:** Bearer token
 
 **Content Type:** application/json
 
@@ -119,7 +128,7 @@
 
 **Method:** POST
 
-**Authorization:** Bearer "<Your Token>"
+**Authorization:** Bearer token
 
 **Content Type:** application/json
 
@@ -137,11 +146,13 @@
 
 ## API for Sellers.
 
+
+
 **URL:** http://localhost:5000 /api/seller/create-catalog
 
 **Method:** POST
 
-**Authorization:** Bearer "<Your Token>"
+**Authorization:** Bearer token
 
 **Content Type:** application/json
 
@@ -154,6 +165,8 @@
 }
   
 </pre>
+
+
 
 
 **URL:** http://localhost:5000/api/seller/orders
