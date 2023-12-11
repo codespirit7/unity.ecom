@@ -63,7 +63,8 @@ const login = async (req, res) => {
 
     const token = jwt.sign(
       {
-        id: user.email,
+        id: user._id,
+        email: user.email,
         userType: user.userType,
       },
       JWT_SECRET

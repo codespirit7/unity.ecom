@@ -21,7 +21,7 @@ const sellerAuthMiddleware = async (req, res, next) => {
     // Attach the decoded user information to the request object for further processing
     console.log(decoded);
 
-    const user = await User.findOne({ email: decoded.id });
+    const user = await User.findOne({ email: decoded.email });
     if (user) {
       if (user.userType !== "seller") {
         return res.status(401).json({ message: "userType not authorized" });
